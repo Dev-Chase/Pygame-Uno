@@ -302,6 +302,7 @@ while carryOn:
                         player_coords = create_player_coords(player_y, len(Chase.cards), player_y_has_changed, player_coords)
                         print(player_coords)
                         show_situation(Chase, Computer, pile, is_player_turn)
+                        is_player_turn = not is_player_turn
                     else:
                         print("Not touching card")
                     show_situation(Chase, Computer, pile, is_player_turn)
@@ -365,6 +366,7 @@ while carryOn:
                 print("Computer is drawing.")
                 Computer.add_card(deck)
                 show_situation(Chase, Computer, pile, is_player_turn)
+                is_player_turn = not is_player_turn
                 time.sleep(0.5)
             if len(Computer.cards) == 0:
                 time.sleep(2)
