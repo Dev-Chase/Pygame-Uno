@@ -305,7 +305,7 @@ while carryOn:
                         print(player_coords)
                         show_situation(Chase, Computer, pile, is_player_turn)
                         if Chase.cards[len(Chase.cards)-1, 0] != pile[0] and Chase.cards[len(Chase.cards)-1, 1] != pile[1] and Chase.cards[len(Chase.cards)-1, 1] != '$' and Chase.cards[len(Chase.cards)-1, 1] != 'C':
-                            is_player_turn = not is_player_turn
+                            is_player_turn = False
                         
                     else:
                         print("Not touching card")
@@ -371,7 +371,7 @@ while carryOn:
                 Computer.add_card(deck)
                 show_situation(Chase, Computer, pile, is_player_turn)
                 if Computer.cards[len(Computer.cards)-1, 0] != pile[0] and Computer.cards[len(Computer.cards)-1, 1] != pile[1] and Computer.cards[len(Computer.cards)-1, 1] != '$' and Computer.cards[len(Computer.cards)-1, 1] != 'C':
-                            is_player_turn = not is_player_turn
+                            is_player_turn = True
                 time.sleep(0.5)
             if len(Computer.cards) == 0:
                 time.sleep(2)
