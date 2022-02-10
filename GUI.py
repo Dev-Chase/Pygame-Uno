@@ -208,6 +208,8 @@ def draw_colour_s(colour_coords):
     pygame.draw.rect(screen,blue, [colour_coords[2, 0], colour_coords[2, 1], 50, 50], 0)
     pygame.draw.rect(screen,yellow, [colour_coords[3, 0], colour_coords[3, 1], 50, 50], 0)
     pygame.draw.rect(screen, black, [colour_coords[0,0], colour_coords[0,1], 100, 100], 3)
+    pygame.draw.line(screen, black,(colour_coords[1, 0], colour_coords[1, 1]),(colour_coords[1,0], colour_coords[1, 1]+97),2)
+    pygame.draw.line(screen, black,(colour_coords[2, 0], colour_coords[2, 1]),(colour_coords[2, 0]+97, colour_coords[2, 1]),2)
 
 player_coords = np.empty((0,2), int)
 player_coords = create_player_coords(player_y, len(Chase.cards), player_y_has_changed, player_coords)
