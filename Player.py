@@ -27,6 +27,7 @@ class Player():
     def add_card(self, deck):
         self.cards = np.append(self.cards, [deck.get_next_card()], axis=0)
         self.size_of_hand += 1
+        
     def play_card(self, card, cardind, other_player, is_wild, colour, pile, is_player_turn, deck):
         if pile[0] == card[0] or pile[1] == card[1] and not is_wild:
             if card[1] == '@':                    

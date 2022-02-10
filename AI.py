@@ -12,6 +12,7 @@ def get_card_colours(player):
             player.blues += 1
         elif i[0] == 'Y':
             player.yellows += 1
+            
 def get_card_cata(player, arr):
     player.r_cards = 0
     player.a_cards = 0

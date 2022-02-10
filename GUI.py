@@ -215,6 +215,7 @@ player_coords = create_player_coords(player_y, len(Chase.cards), player_y_has_ch
 while carryOn:
     # --- Main event loop
     if not is_game_over:
+        
         if is_game_started:
             has_to_draw = False
             player_coords = np.empty((0,2), int)
@@ -256,6 +257,7 @@ while carryOn:
             show_situation(Chase, Computer, pile, is_player_turn)
             restart_game = False
             r_ind = 0
+            
         if is_player_turn:
             show_situation(Chase, Computer, pile, is_player_turn)
             for event in pygame.event.get(): # User did something

@@ -96,6 +96,7 @@ def new_game():
         Computer.add_card(deck)
     show_situation(Chase, Computer, pile, is_player_turn)
     while is_game_over != True:
+        
         if is_player_turn:
             is_player_turn = get_user_input(pile, Chase, Computer, is_player_turn)
             show_situation(Chase, Computer, pile, is_player_turn)

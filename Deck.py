@@ -4,6 +4,7 @@ class Deck():
     def __init__(self, name):
         self.name = name
         self.arr = np.empty((0, 2), str)
+        
     def fill_new(self, suits):
         np.delete(self.arr, 1, axis=1)
         np.delete(self.arr, 0, axis=1)
@@ -18,6 +19,7 @@ class Deck():
             self.arr = np.append(self.arr, [[suits[i], '0']], axis=0)
             self.arr = np.append(self.arr, np.array([['W','C']]), axis=0)
             self.arr = np.append(self.arr, np.array([['+','$']]), axis=0)
+            
     def shuffle(self):
             for i in range(len(self.arr)):
                 swap_idx = randint(0, (len(self.arr)-1))
@@ -30,6 +32,7 @@ class Deck():
                 self.arr[swap_idx, 0] = temp_value[0] # Setting Random Card to Current
                 self.arr[swap_idx, 1] = temp_value[1] # Setting Random Card to Current
                 seed(randint(0, 9999999999999999))
+                
     def get_next_card(self):
         card_to_return = [self.arr[len(self.arr)-1, 0], self.arr[len(self.arr)-1, 1]]
         self.arr = np.delete(self.arr, len(self.arr)-1,axis=0)
