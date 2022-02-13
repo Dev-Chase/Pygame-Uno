@@ -1,8 +1,7 @@
 def does_player_have_card(player, value):
     for i in range(len(player.cards)):
-        if not i+1 == len(player.cards):
-            if player.cards[i, 1] == value:
-                return True
+        if player.cards[i, 1] == value:
+            return True
     return False
 def does_player_have_colour(player, value):
     for i in range(len(player.cards)):
